@@ -2,35 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <title>Privacy Policy</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow: hidden;
-            background-color: #f4f4f9;
-        }
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-        .fallback {
-            padding: 20px;
-            text-align: center;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-        }
-    </style>
+    <!-- Подключаем наши стили -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Подключаем библиотеку PDF.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js" defer></script>
+    <!-- Подключаем наш скрипт (атрибут defer гарантирует запуск после загрузки DOM и PDF.js) -->
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <!-- Check PDF filename -->
-    <iframe src="pr-pol.pdf" title="Privacy Policy">
-        <div class="fallback">
-            <p>Your browser does not support PDF viewing</p>
-            <a href="privacy-policy.pdf" target="_blank">Press here for open or download Privacy Policy</a>
-        </div>
-    </iframe>
+
+    <div id="loading">Loading document...</div>
+    <div id="pdf-container"></div>
+    <div class="download-bar">
+        <a href="privacy-policy.pdf" target="_blank">Open or download original PDF</a>
+    </div>
+
 </body>
 </html>
