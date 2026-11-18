@@ -1,7 +1,7 @@
 const url = 'pr-pol.pdf';
 
 const pdfjsLib = window['pdfjs-dist/build/pdf'];
-pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cloudflare.com';
+pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.worker.min.js';
 
 const container = document.getElementById('pdf-container');
 const loading = document.getElementById('loading');
