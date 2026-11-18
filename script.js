@@ -43,7 +43,11 @@ window.addEventListener('DOMContentLoaded', function() {
         }
     }).catch(function(error) {
         loading.textContent = 'Failed to load PDF: ' + error.message;
-        if (downloadBar) downloadBar.style.display = 'block';
+        
+        const bar = document.querySelector('.download-bar');
+        if (bar) {
+            bar.style.setProperty('display', 'block', 'important');
+        }
         console.error(error);
     });
 });
