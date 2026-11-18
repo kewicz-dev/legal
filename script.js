@@ -1,6 +1,6 @@
 
 window.addEventListener('DOMContentLoaded', function() {
-    const url = 'pr-pol.pdf';
+    const url = 'pr-pol1.pdf';
     const container = document.getElementById('pdf-container');
     const loading = document.getElementById('loading');
 
