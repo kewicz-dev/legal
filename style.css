@@ -42,6 +42,7 @@ canvas {
 }
 
 .download-bar {
+    display: none;
     margin-top: 16px;
     margin-bottom: 24px;
     text-align: center;
